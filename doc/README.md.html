@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>README.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "README.md";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#lab-9">Lab 9</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#basic-docker">Basic Docker</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#inspecting-docker-containers">Inspecting docker containers</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#docker-swarm">Docker Swarm</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#run-on-aws">Run on aws</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#todo">TODO</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="docs markdown"><div class="pilwrap" id="lab-9">
+  <h1>
+    <a href="#lab-9" name="lab-9" class="pilcrow"></a>
+Lab 9
+  </h1>
+</div>
+<div class="pilwrap" id="basic-docker">
+  <h2>
+    <a href="#basic-docker" name="basic-docker" class="pilcrow"></a>
+Basic Docker
+  </h2>
+</div>
+<ul>
+<li>test basic index.js</li>
+<li>Install docker</li>
+<li>Build Docker image with  with <code>docker build -t hello-docker .</code></li>
+<li>View your image with <code>docker image ls hello-docker</code></li>
+<li>Run with <code>docker run -d -p 3000:3000 hello-docker</code></li>
+<li>View with <code>docker container ls</code></li>
+<li>Stop with <code>docker stop &lt;container id&gt;</code></li>
+<li>Push your docker image with docker push https://docs.docker.com/engine/reference/commandline/push/</li>
+<li>Run your image off of dockerhub <code>docker run -p 3000:3000 &lt;username&gt;/hello-docker:v1</code></li>
+<li>Try running someone else's image</li>
+</ul>
+<div class="pilwrap" id="inspecting-docker-containers">
+  <h2>
+    <a href="#inspecting-docker-containers" name="inspecting-docker-containers" class="pilcrow"></a>
+Inspecting docker containers
+  </h2>
+</div>
+<ul>
+<li>Get into your contaienr with <code>docker exec -it &lt;id&gt; sh</code></li>
+<li>You can now navigate and run commands from inside the container</li>
+<li>To get out, <code>exit</code></li>
+<li>To view running logs <code>docker logs &lt;id&gt;</code></li>
+</ul>
+<div class="pilwrap" id="docker-swarm">
+  <h2>
+    <a href="#docker-swarm" name="docker-swarm" class="pilcrow"></a>
+Docker Swarm
+  </h2>
+</div>
+<ul>
+<li>Enter swarm mode with <code>docker swarm init</code></li>
+<li>Try to join a swarm with <code>docker swarm join --token xxx</code></li>
+<li>Deploy stack with <code>docker stack deploy -c docker-compose.yml swarm-of-hellos</code></li>
+<li>View status with <code>docker service ls</code></li>
+<li>Change replicas and redeploy</li>
+<li>Turn off stack with <code>docker stack remove swarm-of-hellos</code></li>
+<li>Leave swarm with <code>docker swarm leave --force</code></li>
+</ul>
+<div class="pilwrap" id="run-on-aws">
+  <h2>
+    <a href="#run-on-aws" name="run-on-aws" class="pilcrow"></a>
+Run on aws
+  </h2>
+</div>
+<ul>
+<li>Install docker with <code>sudo snap install docker</code></li>
+<li>Run with <code>sudo docker run -d -p 80:3000 &lt;username&gt;/hello-docker:v1</code></li>
+<li>If you want to run the full stack, you will need the <code>docker-compose.yml</code> file</li>
+</ul>
+<div class="pilwrap" id="todo">
+  <h2>
+    <a href="#todo" name="todo" class="pilcrow"></a>
+TODO
+  </h2>
+</div>
+<ul>
+<li>Install redis client</li>
+<li>To <code>index.js</code>, add a redis connection to the redis container</li>
+<li>Commit and push</li>
+</ul>
+</div>
+  </div>
+</body>
+</html>
